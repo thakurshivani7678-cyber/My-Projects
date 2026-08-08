@@ -1,0 +1,493 @@
+// 1.variables and datatypes
+name="shivani thakur";
+age=22
+console.log(name);
+console.log(age);
+let fullName="shivani thakur";
+console.log(fullName);
+// var can be redeclared
+var age=21;
+var age=22;
+console.log(age);
+// let cannot be redeclared but can update
+let myAge=21;
+myAge=22;
+console.log(myAge);
+// const cannot be redeclared and updated
+const PI=3.14;
+console.log(PI);
+// bigint is datatype to store big integer values
+// "typeof variable" is used to find type of variable
+let x= BigInt("4567");
+console.log(x);
+let y= Symbol("hello");
+console.log(y);
+// objects=collection of values for ex
+// student is an object here
+const student={
+    fullName:"shivani thakur",//(key:value)
+    age:22,
+    cgpa:8.8,
+    isPass:true
+};
+console.log(student);
+// to access keys in objects
+console.log(student.age);
+// or
+console.log(student["fullName"]);
+const product={
+    penName:"parker jotter standard CT ball pen",
+    penColor:"black",
+    rating:4,
+    isDeal:true,
+    penPrice:270,
+    offer:5
+}
+console.log(product);
+const profile= {
+    name:"Shivani Thakur",
+    posts:1,
+    followers:79,
+    following:143,
+    bio:"PEACE over drama",
+    toFollow:null
+};
+console.log(profile);
+console.log(typeof profile["name"]);
+//2. operators and conditional statements
+
+// arithmatic operators(+,-,*,/,%,**,++,--)
+let a=5;
+let b=4;
+console.log("a=",a, "b=",b);
+console.log("a+b=", a + b);
+console.log("a-b=", a - b);
+console.log("a*b=", a * b);
+console.log("a/b=", a/b);
+console.log("a%b=", a % b);
+console.log("a**b=", a ** b);/*exponential operator(power)*/
+console.log("a++=",a++);
+console.log("a=",a);
+console.log("a--=",a--);
+console.log("a=",a);
+console.log("++a=",++a);
+console.log("--a=",--a);
+// assignment operator(=,+=,-=,*=,%=,**=)
+let c=5;
+let d=4;
+console.log("c=",c,"d=",d);
+console.log("c+=4=",c+=4);/*c=c+4*/
+// comparison operator(==,===,!=,!==,>,>=,<,<=)
+let e=6;/*number*/
+let f="8";/*string->number*/
+console.log("e==f",e==f);/*returns boolen value true or false*/
+console.log("e!=f",e!=f);
+console.log("e===f",e===f);/*strict comparison(also compares type)*/
+console.log("e!==f",e!==f);
+console.log("e>f",e>f);
+console.log("e<=f",e<=f);
+console.log("e<f && e==6 =", e<f && e==6);
+console.log("!(e<f) =",!(e<f));
+// conditional statement
+//1. if statement
+let yourAge=22;
+if (yourAge>=18){
+    console.log("eligible for vote");
+}
+if(yourAge<18){
+    console.log(" not eligible for vote");
+}
+let mode="dark";
+let color;
+if(mode==="dark"){
+    color="black";
+}
+if(mode==="light"){
+    color="white";
+}
+console.log(color);
+// 2. if-else
+let Mode="light";
+let Color;
+if(Mode==="dark"){
+    Color="black";
+}
+else{
+    Color="white";
+}
+console.log(Color);
+// 3. else if Statement
+let COLOR= "pink";
+if(COLOR==="red"){
+    console.log("red");
+}
+else if(COLOR==="blue"){
+    console.log("blue");
+}
+else if(COLOR==="pink"){
+    console.log("pink");
+}
+else{
+    console.log("white");
+}
+// ternary operator
+// condition?true output:false output;
+let AGE=22;
+let result= AGE>18?"adult":"not adult";
+console.log(result);
+alert("hello,my name is shivani thakur:");//one time popup
+let X =prompt("enter a number");//to take a input from user
+console.log(X);
+let NAME=prompt("what's your name;");
+console.log(NAME);
+// question: take a No from the user and check if multiple of 5
+let Y= prompt("enter a number:");
+if(Y%5===0){
+    console.log("multiple of 5");
+}
+else{
+   console.log(" not multiple of 5"); 
+}
+question: give grades according to marks
+let marks= prompt("enter your marks");
+if(marks>=90 && marks<=100){
+    console.log("grade is A");
+}
+else if(marks>=70 && marks<=89){
+    console.log("grade is B");
+}
+else if(marks>=60 && marks<=69){
+    console.log("grade is C");
+}
+else if(marks>=50 && marks<=59){
+    console.log("grade is D");
+}
+else if(marks>=0 && marks<=49){
+   console.log("grade is F");
+}
+else{
+    console.log("invalid marks");
+} 
+
+for loop
+let i;
+for(i=1;i<=5;i++)
+{
+    console.log("i=",i);
+}
+
+to calculate the sum of first n numbers
+let sum=0;
+let n= prompt("enter a number");
+for(let i=1;i<=n;i++)
+{
+    sum=sum+i;
+}
+console.log("sum=",sum);
+
+while loop
+let j=1;
+while(j<=6){
+    console.log("j=",j);
+    j++;
+}
+
+//do while loop(atleast one time run)
+let i=10;
+do{
+    console.log("hello");
+    i++;
+}while(i<=12);
+
+//for-of loop
+let str="shivani";
+let size=0;
+for(let i of str){
+    console.log("i=",i);
+    size++;
+}
+console.log("string size=",size);
+
+//for-in loop
+let Student={
+    name:"shivani thakur",
+    age:22,
+    cgpa:9.3,
+    ispass:true,
+};
+for(let key in Student){
+console.log("key=",key , "value=",Student[key]);
+}
+
+//to print all the even numbers from 0 to 100
+for(let k=0;k<=10;k++)
+{
+    if(k%2==0){
+        console.log("k=",k);
+    }
+}
+
+//guess game number
+let gameNum=23;
+let userNum= prompt("guess the number");
+console.log(userNum);
+while(userNum!=gameNum)
+{ 
+    userNum= prompt("you guessed the wrong number.guess again");
+}
+console.log("congratulations,you guessed the right number");
+
+//3.string
+
+let string= `this is a\nspecial string`;
+console.log(string);
+console.log(string.length);
+
+ let object={
+    item:"pen",
+    cost: 20,
+ };
+
+let output= `cost of ${object.item} is ${object.cost} rupees`;//template literal
+console.log(output);
+
+//or
+console.log("cost of",object.item ,"is",object.cost,"rupees");
+console.log("shivani\tthakur");
+
+//string methods/functions
+let strg = "shivani thakur";
+let newStr= strg.toUpperCase();//toUpperCase()
+console.log(newStr);
+let newString= newStr.toLowerCase();//toLowerCase()
+console.log(newString);
+let z = "    hello    ";
+y = z.trim();//trim()
+console.log(y);
+
+str1="shivani";
+str2="thakur";
+console.log(str1.slice(2,6));//slice(start,end)
+let STR = str1.concat(str2);//let STR= str1+str2;  //concat()
+console.log(STR);
+console.log(str1.replace("ni","ngi"));//replace(oldval,newval)
+console.log(str1.charAt(3));  //charAt(index)
+//question
+let FULLname = prompt("enter your full name");
+let userName = "@"+ FULLname + FULLname.length;
+console.log("username =" ,userName);
+
+//4.arrays
+
+let marks=[34,98,99,76,56];
+console.log("marks=",marks);
+console.log(marks.length);
+console.log(marks[0]);
+let n= marks.length;
+for(let i=0;i<n;i++)
+{
+    console.log(marks[i]);
+}
+//to find average marks
+let sum=0;
+for(let i=0;i<n;i++)
+{
+    sum=sum+marks[i];
+}
+console.log("sum =",sum);
+let av = sum/n;
+console.log("average marks =",av);
+//question
+let items=[250,645,300,900,50];
+console.log("prices =",items);
+let offer;
+for(let i=0;i<items.length;i++){
+    offer=items[i]/10;
+    items[i]=items[i]-offer;
+}
+console.log("prices after 10% offer =",items);
+//array functions 
+
+//push() -> to append
+let junkFood =["pizza","burger","cholebhature","frenchfries","dosa","momos","noodles"];
+junkFood.push("springroll","golgappe");
+console.log(junkFood);
+
+//pop()
+let del_items= junkFood.pop();  
+console.log(junkFood);
+console.log("deleted food item is",del_items);
+
+//toString() do no chage original array
+console.log(junkFood.toString());
+console.log(junkFood);
+
+//concat()
+let fruits =["mango","orange","banana","grapes"];
+let veggies =["tomato","potato","onion"];
+let dryFruits =["walnut","almond","pistachio","cashew"];
+console.log(fruits.concat(veggies,dryFruits));
+
+//unshift()-> add in beginning
+fruits.unshift("lichi");
+console.log(fruits);
+
+//shift()-> delete from start
+dryFruits.shift();
+console.log(dryFruits);
+
+//slice-> piece of an array
+console.log(fruits.slice(0,3));
+
+//splice(start,countstodel,newelements)-> change original array
+veggies.splice(0,2,"capsicum","jackfruit");
+console.log(veggies);
+
+//to add
+veggies.splice(0,0,"peas");
+console.log(veggies);
+
+//to delete
+veggies.splice(3,1);
+console.log(veggies);
+
+//to replace
+veggies.splice(1,1,"spinach");
+console.log(veggies);
+fruits.splice(3);// from index 3 all items will delete
+console.log(fruits);
+
+//question
+let companies =["bloomberg","microsoft","uber","google","IBM","netflix"];
+//to delete bloomberg
+companies.splice(0,1);
+console.log(companies);
+//to add ola at the place of uber
+companies.splice(2,1,"Ola");
+console.log(companies);
+//to add amazon in the end
+companies.push("amazon");
+console.log(companies);
+
+//5.functions
+
+//fuction definition
+function MSG(msg){ //parameter
+    console.log(msg);
+}
+
+//fuction call
+MSG("hello everyone");//argument
+MSG("my name is shivani thakur");
+MSG("and i am learning java script");
+
+//to calculate sum of two numbers
+function Sum(x,y){
+    s=x+y;
+    return(s);
+}
+let RESULT =Sum(5,9);
+console.log(RESULT);
+
+//arrow function
+ 
+const multiply=(a,b)=>{
+    m=a*b;
+    console.log(a*b);
+}
+multiply(5,5);
+
+//Question -> to count vowel in a string passed in a function
+
+function vowelNum(strn)
+{
+      let count =0;
+      for(const char of strn){
+        if(char==="a"||char==="e"||char==="i"||char==="o"||char==="u" )
+            {
+                count++;
+            }
+      }
+      console.log(count);
+}
+
+vowelNum("shivanithakur");
+
+//arrow function
+let vowel=(stng)=>{
+       let count =0;
+      for(const char of stng){
+        if(char==="a"||char==="e"||char==="i"||char==="o"||char==="u" )
+            {
+                count++;
+            }
+      }
+      console.log(count);
+}
+vowel("hello,how are you");
+
+//forEach() -> function passed as argument called callback function.
+// used for array
+let k=["delhi","up","mumbai","uttrakhand"];
+k.forEach((val,index,k)=>{
+    console.log(val.toUpperCase(),index,k);
+});
+//to print squares
+let sq=[122,456,879,98,34,87,99];
+sq.forEach((val)=>{
+    console.log(val*val);
+});
+
+//map() -> returns a new array 
+let SQ=[122,456,879,98,34,87,99];
+let newsq= SQ.map((val)=>{
+     return val/2;
+});
+console.log(newsq);
+
+//filter()
+
+let even=[122,456,879,98,34,87,99];
+let neweven= even.filter((val)=>{
+    if(val%2===0){ 
+    return val;}
+});
+console.log(neweven);
+
+// reduce() -> to give a single value output
+
+//add all values of an array
+let t=[122,456,879,98,34,87,99];
+let add= t.reduce((val1,val2)=>{
+    return val1+val2;
+});
+console.log(add);
+
+let u=[122,456,879,98,34,87,99];
+let greatest= u.reduce((val1,val2)=>{
+    return val1>val2? val1:val2;
+});
+console.log(greatest);
+
+//question :)
+
+let N = prompt("enter a number");
+let arrn=[];
+for(let i=1;i<=N;i++)
+{
+    arrn[i-1]=i;
+}
+console.log(arrn);
+
+//to add n values
+let ADD= arrn.reduce((val1,val2)=>{
+     return val1+val2;
+});
+console.log("additon =", ADD);
+
+//to find factorial of n
+let factorial= arrn.reduce((val1,val2)=>
+{
+    return val1*val2;
+}); 
+console.log("factorial=",factorial);
