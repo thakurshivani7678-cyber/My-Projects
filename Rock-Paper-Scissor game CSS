@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+}
+h2{
+    font-size:2.5rem;
+    color:rgb(230, 154, 61);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:blanchedalmond;
+    min-height:100vh;
+}
+#container{
+    background-color:white;
+    padding:2rem;
+    border-radius:1rem;
+    min-height:50vh;
+    width:60vh;
+    border:1px solid rgb(230, 154, 61);
+}
+form{
+margin:2rem 0 1rem 0;
+}
+ 
+form select,button,input{
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius:0.75rem;
+}
+
+form input{
+    border:1px solid lightgray;
+    height:2rem;
+    padding-left:0.5rem;
+    font-size:1rem;
+}
+.dropdown{
+    display:flex;
+    justify-content:space-between;
+    align-items: center ;
+    margin-top:2rem;
+}
+
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top:1rem;
+}
+
+
+.select-container img{
+    max-width:2rem;
+    padding-left:0.5rem;
+}
+
+.select-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:6rem;
+    border-radius:0.5rem;
+    border:1px solid lightgray;
+}
+
+.select-container select{
+    width:auto;
+    font-size:1rem;
+}
+.msg{
+    margin:2rem 0 2rem 0;
+    font-size:1.1rem ;
+}
+button{
+    height:2.2rem;
+    border:1px solid lightgray;
+    font-size:1rem;
+    background-color: blanchedalmond;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+
+}
+button:active{
+    height:2reem;
+    border:2px solid brown;
+     transition: scale(0.95);
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+p{
+    font-size:1.2rem;
+}
+img{
+    height: 22px;
+    width: 22px;
+}
